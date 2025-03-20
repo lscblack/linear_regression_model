@@ -7,8 +7,8 @@ from sklearn.preprocessing import LabelEncoder
 import uvicorn
 
 # Load the trained model and scaler
-best_model = joblib.load('Random Forest_best_model.pkl')
-scaler = joblib.load('standard_scaler.pkl')
+best_model = joblib.load('../linear_regression/Random Forest_best_model.pkl')
+scaler = joblib.load('../linear_regression/standard_scaler.pkl')
 
 # Initialize LabelEncoders
 sex_encoder = LabelEncoder()
