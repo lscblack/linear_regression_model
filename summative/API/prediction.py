@@ -122,5 +122,5 @@ def predict_charges(data: InputData):
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
 
-if __name__ == "__main__":
-    uvicorn.run("prediction:app", host="0.0.0.0", port=8000, reload=True)
+# if __name__ == "__main__":
+#     uvicorn.run("prediction:app", host="0.0.0.0", port=8000, reload=True)
