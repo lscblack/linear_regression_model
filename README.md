@@ -30,7 +30,7 @@ Understanding how different factors influence medical expenses is critical for i
 4. Help individuals estimate future medical costs based on their personal attributes.  
 
 By building a robust predictive model, we aim to enhance transparency in insurance pricing and contribute to more data-driven decision-making in the healthcare insurance industry.
-### ****
+###
 ![Insurance Estimator App](https://github.com/user-attachments/assets/95792254-687f-4454-9c46-2714aaf3c01b)
 
 ## Project Structure
