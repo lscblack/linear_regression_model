@@ -2,7 +2,34 @@
 
 ## Overview
 This mobile application provides an automated system to estimate annual medical expenditure for new insurance customers based on demographic and health factors. Using a machine learning model trained on verified historical data from over 1,300 customers, the application predicts insurance premium charges based on age, sex, BMI, number of children, smoking habits, and region of residence.
+**Problem Statement**  
 
+Accurately predicting medical insurance costs is crucial for insurance companies to assess risk, set fair pricing, and optimize financial planning. Various factors, such as age, BMI, smoking status, and region, significantly influence healthcare expenses. However, understanding the impact of these factors on insurance charges remains a challenge.  
+
+This project aims to develop a machine learning model that predicts medical expenses based on key demographic and health-related variables. By leveraging predictive analytics, insurance providers can gain deeper insights into cost drivers, refine their pricing strategies, and make data-driven decisions to minimize financial risks. Additionally, this model can help customers estimate their potential medical costs, enabling better financial planning for healthcare expenses.  
+
+---
+
+### **Dataset Overview**  
+The dataset consists of **2,700 records** with **7 features** related to medical insurance charges. The key variables include:  
+
+- **Age**: The age of the insured individual (in years).  
+- **Sex**: The gender of the insured (male/female).  
+- **BMI (Body Mass Index)**: A numerical value indicating body weight relative to height, used to assess obesity levels.  
+- **Children**: The number of dependent children covered under the insurance plan.  
+- **Smoker**: A categorical variable indicating whether the individual is a smoker (yes/no).  
+- **Region**: The geographical region where the individual resides (e.g., northeast, northwest, southeast, southwest).  
+- **Charges**: The total medical insurance cost incurred by the individual.  
+
+### **Significance of the Study**  
+Understanding how different factors influence medical expenses is critical for insurers to develop fair and competitive pricing models. Smoking status and BMI, for example, are known to be strong predictors of higher healthcare costs. This analysis will:  
+
+1. Identify key factors driving insurance costs.  
+2. Improve the accuracy of medical expense predictions.  
+3. Enable insurance companies to optimize pricing strategies.  
+4. Help individuals estimate future medical costs based on their personal attributes.  
+
+By building a robust predictive model, we aim to enhance transparency in insurance pricing and contribute to more data-driven decision-making in the healthcare insurance industry.
 ![Insurance Estimator App](https://via.placeholder.com/600x300)
 
 ## Project Structure
