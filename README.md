@@ -141,17 +141,7 @@ Example response:
 2. Use the `/predict` endpoint with sample data  
 3. Alternatively, use curl:
    ```bash
-   curl -X 'POST' \'https://linear-regression-model-oy9v.onrender.com/predict' \
-  -H 'accept: application/json' \
-  -H 'Content-Type: application/json' \
-  -d '{
-  "age": 30,
-  "sex": "male",
-  "bmi": 30.5,
-  "children": 10,
-  "smoker": "no",
-  "region": "northwest"
-}'
+   curl -X 'POST' \'https://linear-regression-model-oy9v.onrender.com/predict' \-H 'accept: application/json' \-H 'Content-Type: application/json' \-d '{"age": 30,"sex": "male","bmi": 30.5,"children": 10,"smoker": "no","region": "northwest"}'
    ```
 
 ---
@@ -166,6 +156,17 @@ Example response:
 - 📑 [API Documentation](https://linear-regression-model-oy9v.onrender.com/docs)  
 
 ---
+## App Screen Shots
+### Output Screen
+![image](https://github.com/user-attachments/assets/b98a5f2a-1acd-4e9f-aed1-53e1e323974b)
+### Inputs Screen
+![image](https://github.com/user-attachments/assets/2cca057d-2eb9-4735-aeba-80017f0750a4)
+### Swagger UI
+![image](https://github.com/user-attachments/assets/c390a4bc-99cf-442e-abd8-2fb4065fa69b)
+### Model Comparision Grpah based R2
+![image](https://github.com/user-attachments/assets/2c1fe443-ce2c-4233-8739-2cc9d025aa62)
+
+
 
 ## License
 📝 MIT License
