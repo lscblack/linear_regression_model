@@ -140,11 +140,13 @@ Example response:
 1. Access the Swagger UI at [API Docs](https://linear-regression-model-oy9v.onrender.com/docs)  
 2. Use the `/predict` endpoint with sample data  
 3. Alternatively, use curl:
-   ```bash
+```bash
    curl -X 'POST' \'https://linear-regression-model-oy9v.onrender.com/predict' \-H 'accept: application/json' \-H 'Content-Type: application/json' \-d '{"age": 30,"sex": "male","bmi": 30.5,"children": 10,"smoker": "no","region": "northwest"}'
-   ```
 
----
+```
+
+
+
 
 ## Demo
 🎥 [Watch Demo Video (2 minutes)](https://youtu.be/4V3i1nIKmBs)
