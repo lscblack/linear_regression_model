@@ -1,19 +1,16 @@
 # Medical Insurance Cost Estimator
 
+![Python](https://img.shields.io/badge/Python-3.9-blue) ![Flutter](https://img.shields.io/badge/Flutter-3.7-blue) ![FastAPI](https://img.shields.io/badge/FastAPI-0.100-green) ![Flask](https://img.shields.io/badge/Flask-2.3-orange)
+
 ## Overview
 This mobile application provides an automated system to estimate annual medical expenditure for new insurance customers based on demographic and health factors. Using a machine learning model trained on verified historical data from over 1,300 customers, the application predicts insurance premium charges based on age, sex, BMI, number of children, smoking habits, and region of residence.
 
-## A Story That Matters
+## Problem 
 Sarah was a 35-year-old single mother of two, working tirelessly to provide for her children. She knew healthcare was essential but feared the unknown costs that could arise from unexpected medical emergencies. One day, her youngest son fell seriously ill, and without proper planning, the medical bills quickly piled up. The financial burden pushed her into debt, forcing her to choose between rent and hospital expenses. If only she had known beforehand what her medical insurance would cost, she could have prepared better.
 
+Many individuals and families face similar challenges—unpredictable medical costs that disrupt financial stability. For insurance companies, estimating medical expenses accurately is essential for setting fair pricing and managing risk. However, multiple variables such as age, BMI, smoking habits, and location make cost prediction complex.
+
 This is why the **Medical Insurance Cost Estimator** exists—to help people like Sarah plan ahead. This app empowers users by providing an estimate of their annual medical costs based on their personal information. No more guesswork, no more financial shocks—just clear, data-driven insights that help individuals and insurance companies make informed decisions.
-
----
-
-## Problem Statement  
-Accurately predicting medical insurance costs is crucial for insurance companies to assess risk, set fair pricing, and optimize financial planning. Various factors, such as age, BMI, smoking status, and region, significantly influence healthcare expenses. However, understanding the impact of these factors on insurance charges remains a challenge.  
-
-This project aims to develop a machine learning model that predicts medical expenses based on key demographic and health-related variables. By leveraging predictive analytics, insurance providers can gain deeper insights into cost drivers, refine their pricing strategies, and make data-driven decisions to minimize financial risks. Additionally, this model can help customers estimate their potential medical costs, enabling better financial planning for healthcare expenses.
 
 ---
 
@@ -38,8 +35,13 @@ linear_regression_model/
 │   │   ├── multivariate.ipynb
 │   │
 │   ├── API/
-│   │   ├── prediction.py
-│   │   ├── requirements.txt
+│   │   ├── fastapi/
+│   │   │   ├── prediction.py
+│   │   │   ├── requirements.txt
+│   │   │
+│   │   ├── flask/
+│   │       ├── app.py
+│   │       ├── requirements.txt
 │   │
 │   ├── FlutterApp/
 │       └── [Flutter app files]
@@ -68,11 +70,12 @@ Model Performance Summary:
 ---
 
 ## API Service
-The prediction API is built with FastAPI and is deployed on Render.
+The prediction API is built with both FastAPI and Flask and is deployed on Render.
 
-### API Endpoint
-- **Base URL**: [https://linear-regression-model-oy9v.onrender.com/](https://linear-regression-model-oy9v.onrender.com/)
-- **Swagger UI**: [https://linear-regression-model-oy9v.onrender.com/docs](https://linear-regression-model-oy9v.onrender.com/docs)
+### API Endpoints
+- **FastAPI Base URL**: [https://linear-regression-model-oy9v.onrender.com/](https://linear-regression-model-oy9v.onrender.com/)
+- **Flask Base URL**: [https://flask-medical-cost.onrender.com/](https://flask-medical-cost.onrender.com/)
+- **FastAPI Swagger UI**: [https://linear-regression-model-oy9v.onrender.com/docs](https://linear-regression-model-oy9v.onrender.com/docs)
 
 ### API Usage
 Send a **POST** request to the `/predict` endpoint with the following JSON format:
@@ -139,8 +142,7 @@ Example response:
 2. Use the `/predict` endpoint with sample data  
 3. Alternatively, use curl:
    ```bash
-  curl -X 'POST' \
-  'https://linear-regression-model-oy9v.onrender.com/predict' \
+   curl -X 'POST' \'https://linear-regression-model-oy9v.onrender.com/predict' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -152,11 +154,6 @@ Example response:
   "region": "northwest"
 }'
    ```
-
-### Testing the Flutter App
-✅ Run the app on an emulator or physical device  
-✅ Enter test data and verify the results match expectations  
-✅ Check edge cases (e.g., extreme ages, BMI values)  
 
 ---
 
