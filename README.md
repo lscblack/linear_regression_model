@@ -1,6 +1,6 @@
 # Medical Insurance Cost Estimator
 
-![Python](https://img.shields.io/badge/Python-3.9-blue) ![Flutter](https://img.shields.io/badge/Flutter-3.7-blue) ![FastAPI](https://img.shields.io/badge/FastAPI-0.100-green) ![Flask](https://img.shields.io/badge/Flask-2.3-orange)
+![Python](https://img.shields.io/badge/Python-3.12-blue) ![Flutter](https://img.shields.io/badge/Flutter-3.29-blue) ![FastAPI](https://img.shields.io/badge/FastAPI-0.100-green)
 
 ## Overview
 This mobile application provides an automated system to estimate annual medical expenditure for new insurance customers based on demographic and health factors. Using a machine learning model trained on verified historical data from over 1,300 customers, the application predicts insurance premium charges based on age, sex, BMI, number of children, smoking habits, and region of residence.
@@ -74,7 +74,6 @@ The prediction API is built with both FastAPI and Flask and is deployed on Rende
 
 ### API Endpoints
 - **FastAPI Base URL**: [https://linear-regression-model-oy9v.onrender.com/](https://linear-regression-model-oy9v.onrender.com/)
-- **Flask Base URL**: [https://flask-medical-cost.onrender.com/](https://flask-medical-cost.onrender.com/)
 - **FastAPI Swagger UI**: [https://linear-regression-model-oy9v.onrender.com/docs](https://linear-regression-model-oy9v.onrender.com/docs)
 
 ### API Usage
