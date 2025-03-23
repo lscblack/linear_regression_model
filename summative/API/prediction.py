@@ -5,7 +5,7 @@ import numpy as np
 from pydantic import BaseModel, Field, validator
 from sklearn.preprocessing import LabelEncoder
 import uvicorn
-
+from fastapi.middleware.cors import CORSMiddleware
 # Load the trained model and scaler
 best_model = joblib.load('../linear_regression/Random Forest_best_model.pkl')
 scaler = joblib.load('../linear_regression/standard_scaler.pkl')
@@ -24,6 +24,22 @@ app = FastAPI(
     title="Insurance Charges Prediction API",
     description="An API to predict insurance charges based on customer demographics.",
     version="1.0.0"
+)
+# Allow requests from local machine and emulator
+origins = [
+    # "http://localhost",
+    # "http://172.20.10.4:8000",
+    # for test purposes allow all Orgins
+    "*",
+]
+
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],  # Allow all HTTP methods (GET, POST, etc.)
+    allow_headers=["*"],  # Allow all headers
 )
 
 # Request model with validation

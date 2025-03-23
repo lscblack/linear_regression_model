@@ -26,9 +26,9 @@ class _HomepageState extends State<Homepage> {
   String _region = 'southeast';
 
   // Colors
-  final Color _primaryColor = const Color.fromARGB(255, 126, 62, 43);
-  final Color _backgroundColor = const Color(0xFF2A2A2A); // Slightly lighter
-  final Color _cardColor = const Color(0xFF383838); // Slightly lighter cards
+  final Color _primaryColor = const Color.fromARGB(255, 185, 107, 6);
+  final Color _backgroundColor = const Color.fromARGB(255, 255, 255, 255); // Slightly lighter
+  final Color _cardColor = const Color.fromARGB(255, 247, 252, 255); // Slightly lighter cards
 
   // Calculate BMI
   void _calculateBmi() {
@@ -53,8 +53,8 @@ class _HomepageState extends State<Homepage> {
       labelText: label,
       helperText: helperText,
       helperStyle: const TextStyle(color: Colors.white54, fontSize: 12),
-      labelStyle: const TextStyle(color: Colors.white70),
-      prefixIcon: Icon(icon, color: Colors.white70),
+      labelStyle: const TextStyle(color: Colors.black),
+      prefixIcon: Icon(icon, color: Colors.black),
       fillColor: _cardColor,
       filled: true,
       border: OutlineInputBorder(
@@ -161,8 +161,8 @@ class _HomepageState extends State<Homepage> {
         return AlertDialog(
           backgroundColor: _cardColor,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-          title: Text(title, style: const TextStyle(color: Colors.white)),
-          content: Text(message, style: const TextStyle(color: Colors.white70)),
+          title: Text(title, style: const TextStyle(color: Colors.deepOrange)),
+          content: Text(message, style: const TextStyle(color: Colors.black)),
           actions: [
             TextButton(
               onPressed: () => Navigator.pop(context),
@@ -228,7 +228,7 @@ class _HomepageState extends State<Homepage> {
                               const Expanded(
                                 child: Text(
                                   'Enter your information below to get a personalized insurance cost estimate.',
-                                  style: TextStyle(color: Colors.white),
+                                  style: TextStyle(color: Color.fromARGB(255, 185, 107, 6)),
                                 ),
                               ),
                             ],
@@ -240,7 +240,7 @@ class _HomepageState extends State<Homepage> {
                       _sectionHeader('Personal Details'),
                       
                       TextFormField(
-                        style: const TextStyle(color: Colors.white),
+                        style: const TextStyle(color: Color.fromARGB(255, 69, 81, 99)),
                         controller: _ageController,
                         keyboardType: TextInputType.number,
                         decoration: _inputDecoration('Age', Icons.calendar_today),
@@ -266,7 +266,7 @@ class _HomepageState extends State<Homepage> {
                             value: value,
                             child: Text(
                               value.substring(0, 1).toUpperCase() + value.substring(1),
-                              style: const TextStyle(color: Colors.white),
+                              style: const TextStyle(color: Color.fromARGB(255, 69, 81, 99)),
                             ),
                           );
                         }).toList(),
@@ -275,7 +275,7 @@ class _HomepageState extends State<Homepage> {
                             _sex = newValue!;
                           });
                         },
-                        style: const TextStyle(color: Colors.white),
+                        style: const TextStyle(color: Color.fromARGB(255, 69, 81, 99)),
                       ),
                       
                       const SizedBox(height: 16),
@@ -285,7 +285,7 @@ class _HomepageState extends State<Homepage> {
                         children: [
                           Expanded(
                             child: TextFormField(
-                              style: const TextStyle(color: Colors.white),
+                              style: const TextStyle(color: Color.fromARGB(255, 69, 81, 99)),
                               controller: _heightController,
                               keyboardType: const TextInputType.numberWithOptions(decimal: true),
                               decoration: _inputDecoration('Height (cm)', Icons.height, 
@@ -304,7 +304,7 @@ class _HomepageState extends State<Homepage> {
                           const SizedBox(width: 12),
                           Expanded(
                             child: TextFormField(
-                              style: const TextStyle(color: Colors.white),
+                              style: const TextStyle(color: Color.fromARGB(255, 69, 81, 99)),
                               controller: _weightController,
                               keyboardType: const TextInputType.numberWithOptions(decimal: true),
                               decoration: _inputDecoration('Weight (kg)', Icons.fitness_center,
@@ -332,7 +332,7 @@ class _HomepageState extends State<Homepage> {
                               Text(
                                 'Your BMI: ${_calculatedBmi.toStringAsFixed(1)}',
                                 style: const TextStyle(
-                                  color: Colors.white70,
+                                  color: Color.fromARGB(255, 69, 81, 99),
                                   fontStyle: FontStyle.italic,
                                 ),
                               ),
@@ -344,7 +344,7 @@ class _HomepageState extends State<Homepage> {
                       _sectionHeader('Insurance Factors'),
                       
                       TextFormField(
-                        style: const TextStyle(color: Colors.white),
+                        style: const TextStyle(color: Color.fromARGB(255, 69, 81, 99)),
                         controller: _childrenController,
                         keyboardType: TextInputType.number,
                         decoration: _inputDecoration('Dependents', Icons.family_restroom,
@@ -372,7 +372,7 @@ class _HomepageState extends State<Homepage> {
                             value: value,
                             child: Text(
                               value.substring(0, 1).toUpperCase() + value.substring(1),
-                              style: const TextStyle(color: Colors.white),
+                              style: const TextStyle(color: Color.fromARGB(255, 69, 81, 99)),
                             ),
                           );
                         }).toList(),
@@ -381,7 +381,7 @@ class _HomepageState extends State<Homepage> {
                             _smoker = newValue!;
                           });
                         },
-                        style: const TextStyle(color: Colors.white),
+                        style: const TextStyle(color: Color.fromARGB(255, 69, 81, 99)),
                       ),
                       
                       const SizedBox(height: 16),
@@ -396,7 +396,7 @@ class _HomepageState extends State<Homepage> {
                             value: value,
                             child: Text(
                               value.substring(0, 1).toUpperCase() + value.substring(1),
-                              style: const TextStyle(color: Colors.white),
+                              style: const TextStyle(color: Color.fromARGB(255, 69, 81, 99)),
                             ),
                           );
                         }).toList(),
@@ -405,7 +405,7 @@ class _HomepageState extends State<Homepage> {
                             _region = newValue!;
                           });
                         },
-                        style: const TextStyle(color: Colors.white),
+                        style: const TextStyle(color: Color.fromARGB(255, 69, 81, 99)),
                       ),
                       
                       const SizedBox(height: 40),
@@ -444,7 +444,7 @@ class _HomepageState extends State<Homepage> {
             // Loading overlay
             if (_isLoading)
               Container(
-                color: Colors.black54,
+                color: Color.fromARGB(255, 69, 81, 99),
                 child: Center(
                   child: Card(
                     color: _cardColor,
@@ -462,7 +462,7 @@ class _HomepageState extends State<Homepage> {
                           const SizedBox(height: 16),
                           const Text(
                             'Calculating estimate...',
-                            style: TextStyle(color: Colors.white),
+                            style: TextStyle(color: Color.fromARGB(255, 185, 107, 6)),
                           ),
                         ],
                       ),

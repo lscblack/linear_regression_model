@@ -31,9 +31,9 @@ class _PredictionState extends State<Prediction> with SingleTickerProviderStateM
 
   @override
   Widget build(BuildContext context) {
-    final Color primaryColor = const Color.fromARGB(255, 126, 62, 43);
-    final Color backgroundColor = const Color(0xFF2A2A2A);
-    final Color cardColor = const Color(0xFF383838);
+    final Color primaryColor = const Color.fromARGB(255, 185, 107, 6);
+    final Color backgroundColor = const Color.fromARGB(255, 252, 252, 252);
+    final Color cardColor = const Color.fromARGB(255, 251, 253, 255);
     
     // Get arguments from route
     final args = ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>?;
@@ -68,13 +68,13 @@ class _PredictionState extends State<Prediction> with SingleTickerProviderStateM
                           const Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Icon(Icons.price_check, color: Colors.white70),
+                              Icon(Icons.price_check, color: Colors.black45),
                               SizedBox(width: 8),
                               Text(
                                 'Estimated Annual Premium',
                                 style: TextStyle(
-                                  color: Colors.white70,
-                                  fontSize: 16,
+                                  color: Color.fromARGB(255, 69, 81, 99),
+                                  fontSize: 20,
                                 ),
                               ),
                             ],
@@ -158,7 +158,7 @@ class _PredictionState extends State<Prediction> with SingleTickerProviderStateM
                       const Text(
                         'Your Information',
                         style: TextStyle(
-                          color: Colors.white,
+                          color: Color.fromARGB(255, 69, 81, 99),
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
                         ),
@@ -183,11 +183,11 @@ class _PredictionState extends State<Prediction> with SingleTickerProviderStateM
                       child: Column(
                         children: [
                           _buildInfoRow(context, 'Age', '${inputData['age'] ?? "N/A"}', Icons.calendar_today),
-                          _buildInfoRow(context, 'Sex', '${(inputData['sex'] ?? "").toString().capitalize()}', Icons.person),
+                          _buildInfoRow(context, 'Sex', (inputData['sex'] ?? "").toString().capitalize(), Icons.person),
                           _buildInfoRow(context, 'BMI', '${inputData['bmi']?.toStringAsFixed(1) ?? "N/A"}', Icons.monitor_weight),
                           _buildInfoRow(context, 'Dependents', '${inputData['children'] ?? "N/A"}', Icons.family_restroom),
-                          _buildInfoRow(context, 'Smoker', '${(inputData['smoker'] ?? "").toString().capitalize()}', Icons.smoking_rooms),
-                          _buildInfoRow(context, 'Region', '${(inputData['region'] ?? "").toString().capitalize()}', Icons.location_on, isLast: true),
+                          _buildInfoRow(context, 'Smoker', (inputData['smoker'] ?? "").toString().capitalize(), Icons.smoking_rooms),
+                          _buildInfoRow(context, 'Region', (inputData['region'] ?? "").toString().capitalize(), Icons.location_on, isLast: true),
                         ],
                       ),
                     ),
@@ -207,7 +207,7 @@ class _PredictionState extends State<Prediction> with SingleTickerProviderStateM
                   )),
                   child: Card(
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                    color: primaryColor.withOpacity(0.1),
+                    color: Colors.white,
                     child: Padding(
                       padding: const EdgeInsets.all(16),
                       child: Column(
@@ -220,7 +220,7 @@ class _PredictionState extends State<Prediction> with SingleTickerProviderStateM
                               const Text(
                                 'Key Factors',
                                 style: TextStyle(
-                                  color: Colors.white,
+                                  color: Color.fromARGB(255, 185, 107, 6),
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold,
                                 ),
@@ -286,7 +286,7 @@ class _PredictionState extends State<Prediction> with SingleTickerProviderStateM
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(12),
                           ),
-                          foregroundColor: Colors.white,
+                          foregroundColor: Color.fromARGB(255, 69, 81, 99),
                         ),
                       ),
                     ),
@@ -328,7 +328,7 @@ class _PredictionState extends State<Prediction> with SingleTickerProviderStateM
           Text(
             label,
             style: const TextStyle(
-              color: Colors.white70,
+              color: Colors.black45,
               fontSize: 15,
             ),
           ),
@@ -336,7 +336,7 @@ class _PredictionState extends State<Prediction> with SingleTickerProviderStateM
           Text(
             value,
             style: const TextStyle(
-              color: Colors.white,
+              color: Color.fromARGB(255, 69, 81, 99),
               fontWeight: FontWeight.w500,
               fontSize: 15,
             ),
@@ -361,7 +361,7 @@ class _PredictionState extends State<Prediction> with SingleTickerProviderStateM
             child: Text(
               condition ? highText : lowText,
               style: const TextStyle(
-                color: Colors.white70,
+                color: Color.fromARGB(115, 31, 50, 85),
                 fontSize: 14,
               ),
             ),

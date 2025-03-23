@@ -56,10 +56,10 @@ class _SplashscreenState extends State<Splashscreen> with SingleTickerProviderSt
   @override
   Widget build(BuildContext context) {
     // Define the orange color as a constant to avoid null issues
-    const Color orangeColor = Color(0xFFFF5722);
+    const Color orangeColor = Color.fromARGB(255, 185, 107, 6);
     
     return Scaffold(
-      backgroundColor: const Color(0xFF222222), // Dark background
+      backgroundColor: const Color.fromARGB(255, 247, 252, 255), // Dark background
       body: SafeArea(
         child: AnimatedBuilder(
           animation: _animationController,
@@ -103,7 +103,7 @@ class _SplashscreenState extends State<Splashscreen> with SingleTickerProviderSt
                       const Text(
                         "Know Your'e Insurance ",
                         style: TextStyle(
-                          color: Colors.white,
+                          color: Color.fromARGB(255, 62, 75, 102),
                           fontSize: 32,
                           fontWeight: FontWeight.bold,
                           letterSpacing: 1.2,
@@ -116,7 +116,7 @@ class _SplashscreenState extends State<Splashscreen> with SingleTickerProviderSt
                       Text(
                         "regression insights at your fingertips with us",
                         style: TextStyle(
-                          color: Colors.white.withOpacity(0.7),
+                          color: Color.fromARGB(255, 62, 75, 102).withOpacity(0.7),
                           fontSize: 16,
                           letterSpacing: 0.5,
                         ),
@@ -129,7 +129,7 @@ class _SplashscreenState extends State<Splashscreen> with SingleTickerProviderSt
                         width: 200,
                         child: LinearProgressIndicator(
                           value: _animationController.value,
-                          backgroundColor: Colors.white.withOpacity(0.2),
+                          backgroundColor: Color.fromARGB(255, 62, 75, 102).withOpacity(0.2),
                           valueColor: const AlwaysStoppedAnimation<Color>(orangeColor), // Using the const color
                           borderRadius: BorderRadius.circular(8),
                           minHeight: 8,
